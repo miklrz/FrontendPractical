@@ -4,22 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/libraryFavicon.png">
     <title>Library</title>
 </head>
 
 <body>
     <h1>Онлайн библиотека</h1>
-    <h2>Список книг</h2>
-    <ul>
-        <li>Война и мир - Лев Николаевич Толстой</li>
-        <li>1984 - Джордж Оруэлл</li>
-    </ul>
-
+    <div>
+        <a href="#bookList">Список книг</a><br>
+        <a href="#contacts">Контакты</a>
+    </div>
+    <hr>
+    <div id="bookList">
+        <h2>Список книг</h2>
+        <ol type="a" start="2">
+            <li>Война и мир - Лев Николаевич Толстой</li>
+            <li>1984 - Джордж Оруэлл</li>
+        </ol>
+    </div>
     <hr>
     <div>
+        <h2>Книги</h2>
         <div>
             <h3><a href="https://www.litres.ru/series/voyna-i-mir-449/">Война и мир</a> - Лев Николаевич Толстой</h3>
             <img src="img/voinaimir.jpg" alt="Война и мир image" style="width: 200px; height: 300px;">
+            <h4>Описание</h4>
             <p>Роман-эпопея <strong>Льва Николаевича Толстого (1828-1910) "Война и мир"</strong> - одно из самых
                 известных произведений мировой литературы. Созданное во второй половине XIX века, оно ставит важнейшие
                 вопросы о жизни человека и общества. Лев Толстой показывает, как во времена драматических испытаний
@@ -36,16 +45,19 @@
         <div>
             <h3><a href="https://www.litres.ru/book/dzhordzh-oruell/1984-129098/">1984</a> - Джордж Оруэлл</h3>
             <img src="img/1984.jpg" alt="1984 image" style="width: 200px;height:300px">
+            <h4>Описание</h4>
             <p>История маленького человека, обнаружившего в себе волю к протесту в мире, где правящая партия неусыпно
                 следит за своими гражданами, подавляя любое их стремление к свободе. Сломает ли его давление системы,
                 или он сохранит свой бунтарский дух – этот вопрос ставит Джордж Оруэлл перед читателем в известнейшем
                 романе-антиутопии XX века. Для широкого круга читателей.
         </div>
+
     </div>
     <hr>
-    <div>
+    <div id="contacts">
         <h2>Контакты</h2>
-
+        <p>Телефон: <a href="tel:89161156432">8-916-115-64-32</a></p>
+        <p>Email: <a href="mailto:example@gmail.com">example@gmail.com</a></p>
     </div>
 </body>
 
