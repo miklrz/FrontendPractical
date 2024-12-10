@@ -1,0 +1,9 @@
+pwd
+/Users/Documents/russian-travel-main
+
+git branch
+* main
+develop
+
+touch .nojekyll
+git add . && git commit -m "added nojekyll" 
