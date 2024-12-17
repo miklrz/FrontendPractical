@@ -1,1 +1,1 @@
-# ![Link](https://miklrz.github.io/FrontendPractical/)
+# https://miklrz.github.io/FrontendPractical/
