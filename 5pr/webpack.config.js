@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // Импорт плагина
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // Импорт плагина для извлечения CSS
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/scripts/index.js', // Входная точка для JavaScript
@@ -41,10 +42,24 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'main.css', // Имя выходного CSS файла
         }),
+        new CleanWebpackPlugin(), // использовали плагин
     ],
     devServer: {
         static: path.resolve(__dirname, 'dist'), // Папка для сервера разработки
         port: 8080, // Порт для локального хостинга
         open: true, // Автоматическое открытие браузера
     },
+    module: {
+        rules: [ // rules — это массив правил
+            // добавим в него объект правил для бабеля
+            {
+                // регулярное выражение, которое ищет все js файлы
+                test: /\.js$/,
+                // при обработке этих файлов нужно использовать babel-loader
+                use: 'babel-loader',
+                // исключает папку node_modules, файлы в ней обрабатывать не нужно
+                exclude: '/node_modules/'
+            }
+        ]
+    }
 };
